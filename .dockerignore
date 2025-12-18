@@ -1,0 +1,11 @@
+/.git
+/.gitignore
+/node_modules
+/vendor
+/uploads/media/*
+/uploads/products/*
+/uploads/settings/*
+/.trae
+/.DS_Store
+vercel.json
+api/

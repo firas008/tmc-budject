@@ -1,0 +1,21 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Skip existing files and directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Front controller
+RewriteRule ^ index.php [L]
+</IfModule>
+
+# Optional: uncomment and fill to configure DB via environment variables on Hostinger
+# SetEnv DB_HOST your-mysql-host
+# SetEnv DB_NAME your-database-name
+# SetEnv DB_USER your-database-user
+# SetEnv DB_PASS your-database-password
+
